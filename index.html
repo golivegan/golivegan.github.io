@@ -41,14 +41,22 @@
       overflow: hidden;
     }
 
-    iframe {
-      position: absolute;
-      top: -50px;
-      left: 0;
-      width: 100vw;
-      height: calc(100vh + 50px);
-      border: none;
-    }
+  iframe {
+  position: absolute;
+  top: -70px; /* hide more of the top */
+  left: 0;
+  width: 100vw;
+  height: calc(100vh + 70px); /* adjust height accordingly */
+  border: none;
+}
+
+@media (max-width: 768px) {
+  iframe {
+    top: -90px;
+    height: calc(100vh + 90px);
+  }
+}
+
   </style>
 </head>
 <body>
