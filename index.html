@@ -27,57 +27,54 @@
   <link rel="icon" type="image/png" href="/favicon.png" />
 
   <style>
-   html, body {
+ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background-color: #000; /* fallback to prevent white flash */
+  background: #000;
 }
 
 .iframe-wrapper {
   position: relative;
-  width: 100%;
-  height: 100%;
-  max-width: 100vw;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
 }
 
 iframe {
   position: absolute;
-  top: -80px;
+  top: -120px; /* push banner off-screen */
   left: 0;
   width: 100%;
-  height: calc(100vh + 100px);
+  height: calc(100vh + 120px); /* fill extra space */
   border: none;
   max-width: 100vw;
-  overflow: hidden;
-  touch-action: none;
-  pointer-events: auto;
-  -webkit-overflow-scrolling: none;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
 }
 
 @media (max-width: 768px) {
   iframe {
-    top: -100px;
-    height: calc(100vh + 120px);
-    position: fixed;
+    top: -150px;
+    height: calc(100vh + 150px);
   }
 }
+
 
 
   </style>
 </head>
 <body>
   <div class="iframe-wrapper">
-   <iframe 
+  <iframe 
   src="https://golivegan.wixsite.com/olivergruber" 
-  title="Oliver Gruber – Official Site" 
-  allowfullscreen 
+  title="Oliver Gruber – Official Site"
+  allowfullscreen
   aria-hidden="true"
-  scrolling="no"
 ></iframe>
+
 
   </div>
 </body>
